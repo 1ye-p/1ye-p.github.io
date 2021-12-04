@@ -132,20 +132,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -183,6 +183,123 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="一叶">
+      <meta itemprop="description" content="当你下定决心做一件事的时候，全世界都会来帮你">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶的小窝">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="post-title-link" itemprop="url">Android笔记(一)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-12-02 17:19:17" itemprop="dateCreated datePublished" datetime="2021-12-02T17:19:17+08:00">2021-12-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-03 12:18:57" itemprop="dateModified" datetime="2021-12-03T12:18:57+08:00">2021-12-03</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Android 小白的入门之旅。</p>
+<p>如有不足（错误），请多指正。</p>
+<hr>
+<h2 id="Android-虚拟机"><a href="#Android-虚拟机" class="headerlink" title="Android 虚拟机"></a>Android 虚拟机</h2><p>Android虚拟机包含 <code>Java虚拟机</code> (JVM) 和 <code>Dalvik虚拟机</code> (DVM)。</p>
+<p> <code>Android</code> 应用程序运行在 <code>Dalvik/ART</code> 虚拟机，并且每一个应用程序对应有一个单独的 <code>Dalvik</code> 虚拟机实例。<br> <code>Dalvik</code> 虚拟机实则也算是一个 <code>Java</code> 虚拟机，只不过它执行的是 <code>dex</code>文件，而不是 <code>class</code> 文件。</p>
+<p><code>Dalvik</code> 虚拟机执行的是 <code>dex</code> 字节码，从 <code>Android2.2</code> 版本开始，支持 JIT即时编译 (Just in Time)，在程序运行的过程中进行选择热点代码(经常执行的代码)进行编译或者优化。</p>
+<p>而 <code>ART(Android RunTime)</code> 是在<code>Android 4.4</code>中引入的一个开发者选项，也是 <code>Android 5.0</code> 以及更高版本的默认<code>Android</code>运行时。<code>ART</code> 虚拟机执行的是本地机器码。<code>Android</code> 的运行时从 <code>Dalvik</code>虚拟机替换成 <code>ART</code>虚拟机，并不要求开发者将自己的应用直接编译成目标机器码，<code>APK</code> 仍然是一个包含 <code>dex</code> 字节码的文件。</p>
+<p><code>ART</code> 和 <code>Dalvik</code> 都是运行 <code>dex</code>字节码的兼容运行时，因此针对 <code>dalvik</code>开发的应用也能在 <code>ART</code> 环境中运作。</p>
+<p><code>dex</code>文件是很多 <code>.class</code>文件通过 <code>DX编译器</code> 处理压缩后的产物，最终可以在 <code>Android</code>运行时环境执行。</p>
+<h3 id="Java虚拟机-和-Dalvik虚拟机的区别"><a href="#Java虚拟机-和-Dalvik虚拟机的区别" class="headerlink" title="Java虚拟机 和 Dalvik虚拟机的区别"></a>Java虚拟机 和 Dalvik虚拟机的区别</h3><ol>
+<li>运行的字节码不同</li>
+</ol>
+<p>Java虚拟机运行的是Java字节码，Dalvik虚拟机运行的是Dalvik字节码(可以理解为汇编)。</p>
+<p>传统的Java程序经过编译，生成Java字节码并保存在class文件中，Java虚拟机通过解码Class文件内容运行程序；</p>
+<p>Dalvik虚拟机运行的Dalvik字节码是由Java字节码转换而来，并被打包到一个DEX可执行文件中(为什么使用JEB反编译DEX文件，就是通过DEX还原源JAVA代码)，Dalvik虚拟机通过解释DEX文件来执行这些字节码。</p>
+<ol start="2">
+<li>Dalvik可执行文件的体积更小</li>
+</ol>
+<p>为什么Dalvik可执行文件dex体积更小？<br>在Android SDK中，将Java字节码转换为Dalvik字节码的工具是”dx”。dx能够重新排列Java类文件，消除在类文件中的冗余信息，避免重复加载和解析。</p>
+<p>原理是这样子的：<br>Java类中通常有多个方法签名，如果它被调用或者继承，这些签名和方法也会被继承在调用方，所以大量的类包含同样的签名和字符串常量造成冗余。DX把这些常量统一存放在”常量池”中，一个常量只出现一次，供所有类使用，所以DEX文件体积更小。</p>
+<ol start="3">
+<li>虚拟机架构不同</li>
+</ol>
+<p>Java虚拟机基于栈架构，运行时指令频繁入栈和出栈，占用大量CPU时间，对于资源有限的设备资源比较吃紧。</p>
+<p>而Dalvik是基于寄存器架构的，指令发送给寄存器。直接操作寄存器的汇编语言执行速度是最快的。</p>
+<ol start="4">
+<li>虚拟机执行流程</li>
+</ol>
+<p>Dalvik属于Android运行时环境。</p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png" class="" title="Dalvik虚拟机执行流程">
+
+<p>Zygote是所有进程的孵化器，应用程序通过system_server将指令发给Zygote，Zygote为其分配一个单独的进程，并由Dalvik执行。</p>
+<p>Dalvik通过loadClassFromDex()装载类。类被解析后变成ClassObject类型的数据结构存储，虚拟机采用gDvm.loadedClass全局散列表(类似map)存储和查询。</p>
+<p>字节码验证器使用dvmVerifyCodeFlow()函数对装入的代码进行校验，虚拟机调用FindClass()函数查找并找到main()方法类。最后调用dvmInterpret()函数来初始化解释器并执行字节流。</p>
+<ol start="5">
+<li>虚拟机执行方式</li>
+</ol>
+<p>即时编译。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/22/%E5%B0%8F%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -206,9 +323,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-11-22 20:15:38 / 修改时间：22:02:16" itemprop="dateCreated datePublished" datetime="2021-11-22T20:15:38+08:00">2021-11-22</time>
+      <time title="创建时间：2021-11-22 20:15:38" itemprop="dateCreated datePublished" datetime="2021-11-22T20:15:38+08:00">2021-11-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-04 21:52:06" itemprop="dateModified" datetime="2021-12-04T21:52:06+08:00">2021-12-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+        </span>
     </span>
 
   

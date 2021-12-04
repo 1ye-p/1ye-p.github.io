@@ -20,28 +20,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
-<meta name="description" content="历时4个月的实习结束，很久没有更新博客了，没错是实习太忙了（好吧我摊牌了，我是懒🐕），简单整理一下心得及近期计划。">
+<meta name="description" content="Android 小白的入门之旅。 如有不足（错误），请多指正。  Android 虚拟机Android虚拟机包含 Java虚拟机 (JVM) 和 Dalvik虚拟机 (DVM)。  Android 应用程序运行在 Dalvik&#x2F;ART 虚拟机，并且每一个应用程序对应有一个单独的 Dalvik 虚拟机实例。 Dalvik 虚拟机实则也算是一个 Java 虚拟机，只不过它执行的是 dex文件，而不是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小记">
-<meta property="og:url" content="http://example.com/2021/11/22/%E5%B0%8F%E8%AE%B0/index.html">
+<meta property="og:title" content="Android笔记(一)">
+<meta property="og:url" content="http://example.com/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/index.html">
 <meta property="og:site_name" content="一叶的小窝">
-<meta property="og:description" content="历时4个月的实习结束，很久没有更新博客了，没错是实习太忙了（好吧我摊牌了，我是懒🐕），简单整理一下心得及近期计划。">
+<meta property="og:description" content="Android 小白的入门之旅。 如有不足（错误），请多指正。  Android 虚拟机Android虚拟机包含 Java虚拟机 (JVM) 和 Dalvik虚拟机 (DVM)。  Android 应用程序运行在 Dalvik&#x2F;ART 虚拟机，并且每一个应用程序对应有一个单独的 Dalvik 虚拟机实例。 Dalvik 虚拟机实则也算是一个 Java 虚拟机，只不过它执行的是 dex文件，而不是">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-22T12:15:38.000Z">
-<meta property="article:modified_time" content="2021-12-04T13:52:06.248Z">
+<meta property="og:image" content="http://example.com/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png">
+<meta property="article:published_time" content="2021-12-02T09:19:17.000Z">
+<meta property="article:modified_time" content="2021-12-03T04:18:57.432Z">
 <meta property="article:author" content="一叶">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png">
 
 
-<link rel="canonical" href="http://example.com/2021/11/22/%E5%B0%8F%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;11&#x2F;22&#x2F;%E5%B0%8F%E8%AE%B0&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;11&#x2F;22&#x2F;小记&#x2F;&quot;,&quot;title&quot;:&quot;小记&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;12&#x2F;02&#x2F;Android%E7%AC%94%E8%AE%B0-%E4%B8%80&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;12&#x2F;02&#x2F;Android笔记-一&#x2F;&quot;,&quot;title&quot;:&quot;Android笔记(一)&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>小记 | 一叶的小窝</title><script src="/js/config.js"></script>
+<title>Android笔记(一) | 一叶的小窝</title><script src="/js/config.js"></script>
   
 
 
@@ -121,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%8E%86"><span class="nav-number">1.</span> <span class="nav-text">经历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92"><span class="nav-number">2.</span> <span class="nav-text">近期计划</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">Android 虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E8%99%9A%E6%8B%9F%E6%9C%BA-%E5%92%8C-Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.1.</span> <span class="nav-text">Java虚拟机 和 Dalvik虚拟机的区别</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -187,7 +189,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/22/%E5%B0%8F%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -200,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          小记
+          Android笔记(一)
         </h1>
 
         <div class="post-meta-container">
@@ -211,14 +213,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-11-22 20:15:38" itemprop="dateCreated datePublished" datetime="2021-11-22T20:15:38+08:00">2021-11-22</time>
+      <time title="创建时间：2021-12-02 17:19:17" itemprop="dateCreated datePublished" datetime="2021-12-02T17:19:17+08:00">2021-12-02</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-04 21:52:06" itemprop="dateModified" datetime="2021-12-04T21:52:06+08:00">2021-12-04</time>
+        <time title="修改时间：2021-12-03 12:18:57" itemprop="dateModified" datetime="2021-12-03T12:18:57+08:00">2021-12-03</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -226,7 +228,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
         </span>
     </span>
 
@@ -240,54 +242,44 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>历时4个月的实习结束，很久没有更新博客了，没错是实习太忙了（好吧我摊牌了，我是懒🐕），简单整理一下心得及近期计划。</p>
-<span id="more"></span>
+        <p>Android 小白的入门之旅。</p>
+<p>如有不足（错误），请多指正。</p>
+<hr>
+<h2 id="Android-虚拟机"><a href="#Android-虚拟机" class="headerlink" title="Android 虚拟机"></a>Android 虚拟机</h2><p>Android虚拟机包含 <code>Java虚拟机</code> (JVM) 和 <code>Dalvik虚拟机</code> (DVM)。</p>
+<p> <code>Android</code> 应用程序运行在 <code>Dalvik/ART</code> 虚拟机，并且每一个应用程序对应有一个单独的 <code>Dalvik</code> 虚拟机实例。<br> <code>Dalvik</code> 虚拟机实则也算是一个 <code>Java</code> 虚拟机，只不过它执行的是 <code>dex</code>文件，而不是 <code>class</code> 文件。</p>
+<p><code>Dalvik</code> 虚拟机执行的是 <code>dex</code> 字节码，从 <code>Android2.2</code> 版本开始，支持 JIT即时编译 (Just in Time)，在程序运行的过程中进行选择热点代码(经常执行的代码)进行编译或者优化。</p>
+<p>而 <code>ART(Android RunTime)</code> 是在<code>Android 4.4</code>中引入的一个开发者选项，也是 <code>Android 5.0</code> 以及更高版本的默认<code>Android</code>运行时。<code>ART</code> 虚拟机执行的是本地机器码。<code>Android</code> 的运行时从 <code>Dalvik</code>虚拟机替换成 <code>ART</code>虚拟机，并不要求开发者将自己的应用直接编译成目标机器码，<code>APK</code> 仍然是一个包含 <code>dex</code> 字节码的文件。</p>
+<p><code>ART</code> 和 <code>Dalvik</code> 都是运行 <code>dex</code>字节码的兼容运行时，因此针对 <code>dalvik</code>开发的应用也能在 <code>ART</code> 环境中运作。</p>
+<p><code>dex</code>文件是很多 <code>.class</code>文件通过 <code>DX编译器</code> 处理压缩后的产物，最终可以在 <code>Android</code>运行时环境执行。</p>
+<h3 id="Java虚拟机-和-Dalvik虚拟机的区别"><a href="#Java虚拟机-和-Dalvik虚拟机的区别" class="headerlink" title="Java虚拟机 和 Dalvik虚拟机的区别"></a>Java虚拟机 和 Dalvik虚拟机的区别</h3><ol>
+<li>运行的字节码不同</li>
+</ol>
+<p>Java虚拟机运行的是Java字节码，Dalvik虚拟机运行的是Dalvik字节码(可以理解为汇编)。</p>
+<p>传统的Java程序经过编译，生成Java字节码并保存在class文件中，Java虚拟机通过解码Class文件内容运行程序；</p>
+<p>Dalvik虚拟机运行的Dalvik字节码是由Java字节码转换而来，并被打包到一个DEX可执行文件中(为什么使用JEB反编译DEX文件，就是通过DEX还原源JAVA代码)，Dalvik虚拟机通过解释DEX文件来执行这些字节码。</p>
+<ol start="2">
+<li>Dalvik可执行文件的体积更小</li>
+</ol>
+<p>为什么Dalvik可执行文件dex体积更小？<br>在Android SDK中，将Java字节码转换为Dalvik字节码的工具是”dx”。dx能够重新排列Java类文件，消除在类文件中的冗余信息，避免重复加载和解析。</p>
+<p>原理是这样子的：<br>Java类中通常有多个方法签名，如果它被调用或者继承，这些签名和方法也会被继承在调用方，所以大量的类包含同样的签名和字符串常量造成冗余。DX把这些常量统一存放在”常量池”中，一个常量只出现一次，供所有类使用，所以DEX文件体积更小。</p>
+<ol start="3">
+<li>虚拟机架构不同</li>
+</ol>
+<p>Java虚拟机基于栈架构，运行时指令频繁入栈和出栈，占用大量CPU时间，对于资源有限的设备资源比较吃紧。</p>
+<p>而Dalvik是基于寄存器架构的，指令发送给寄存器。直接操作寄存器的汇编语言执行速度是最快的。</p>
+<ol start="4">
+<li>虚拟机执行流程</li>
+</ol>
+<p>Dalvik属于Android运行时环境。</p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png" class="" title="Dalvik虚拟机执行流程">
 
-
-
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><p>第一次实习感觉是那么的新鲜，抱着能学到高水平技术的心态迈入了职场。前一个多月由于项目不太成熟，需要做大量的QA工作，对于个人来说有点小难受，工作内容比较充实基本是从早忙到晚，但感觉没有得到很好的成长，刚开始时内心是有一定的失落在其中的。随着时间的流逝对于业务有了一定的了解，也明白这是非常重要的一环，只有在测试中一步步的优化，一次次的对抗之后项目才能逐步成熟。自己偷偷做一些小工具减轻工作量倒也是挺爽的😄（小声bb）</p>
-<p>后续对接了一些服务端的功能，跟着导师做了一些开发，总结了一些协议逆向的方法等等，移动端的知识不太足，逆向工作的大头基本都交给大佬们了，还是有些遗憾，趁还没毕业赶紧多看书叭。</p>
-<p>总体小组氛围还是很nice的，组长和导师都很好、很耐心，也给了足够的时间去成长。工作的时候小组能有个良好的氛围真的很重要。未来毕业的工作地点离家还是挺远的，亲友们也都不在身旁，有点小小的难过😫。</p>
-<p>总之，加油！</p>
-<h2 id="近期计划"><a href="#近期计划" class="headerlink" title="近期计划"></a>近期计划</h2><p>毕业前积累必要的知识及技能，列一些小规划。</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> Android虚拟机机制，打包原理，系统启动流程，App启动流程，IPC原理，熟练搭建IPC框架</li>
-<li><input disabled="" type="checkbox"> Android JDK、NDK开发和JNI技术，熟悉Log原理</li>
-<li><input disabled="" type="checkbox"> Android运行机制，了解FrameWork开发。</li>
-<li><input disabled="" type="checkbox"> DEX、ELF、XML、ARSC等文件结构。</li>
-<li><input disabled="" type="checkbox"> 复习一下网络知识（协议逆向）。<ul>
-<li><input disabled="" type="checkbox"> 客户端与服务器如何进行交互的（OSI模型、TCP/IP模型）。</li>
-<li><input disabled="" type="checkbox"> HTTP协议与HTTPS安全协议，数字证书、SSL证书检测</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> mitproxy、Fiddler和Charles抓包</li>
-<li><input disabled="" type="checkbox"> 安卓操作系统启动流程、Zygote启动流程。</li>
-<li><input disabled="" type="checkbox"> Dalvik虚拟机、ART虚拟机、SO加载流程。</li>
-<li><input disabled="" type="checkbox"> 加固与脱壳<ul>
-<li><input disabled="" type="checkbox"> Dex文件整体加密、Dex代码抽取加密。</li>
-<li><input disabled="" type="checkbox"> SO文件整体加密、函数加密、区段加密、加壳、混淆。</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> 复习一下加密算法<ul>
-<li><input disabled="" type="checkbox"> 编码算法、消息摘要算法、对称加密算法</li>
-<li><input disabled="" type="checkbox"> 非对称加密算法、数字签名算法。</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> Xposed、Substrate、Fridad等框架。</li>
-<li><input disabled="" type="checkbox"> 反调试<ul>
-<li><input disabled="" type="checkbox"> 文件检测</li>
-<li><input disabled="" type="checkbox"> 调试端口检测</li>
-<li><input disabled="" type="checkbox"> 进程名检测</li>
-<li><input disabled="" type="checkbox"> 防附加</li>
-<li><input disabled="" type="checkbox"> 轮询检测TracePID</li>
-<li><input disabled="" type="checkbox"> 时间检测</li>
-<li><input disabled="" type="checkbox"> 信号检测</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> Frida，Xposed &amp; 练习</li>
-<li><input disabled="" type="checkbox"> 重打包 &amp; 重打包检测</li>
-<li><input disabled="" type="checkbox"> </li>
-</ul>
+<p>Zygote是所有进程的孵化器，应用程序通过system_server将指令发给Zygote，Zygote为其分配一个单独的进程，并由Dalvik执行。</p>
+<p>Dalvik通过loadClassFromDex()装载类。类被解析后变成ClassObject类型的数据结构存储，虚拟机采用gDvm.loadedClass全局散列表(类似map)存储和查询。</p>
+<p>字节码验证器使用dvmVerifyCodeFlow()函数对装入的代码进行校验，虚拟机调用FindClass()函数查找并找到main()方法类。最后调用dvmInterpret()函数来初始化解释器并执行字节流。</p>
+<ol start="5">
+<li>虚拟机执行方式</li>
+</ol>
+<p>即时编译。</p>
 
     </div>
 
@@ -297,21 +289,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"># 随笔</a>
+              <a href="/tags/Android/" rel="tag"># Android</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/05/15/%E5%88%9D%E6%8E%A2%E8%BF%9C%E6%8E%A7%E6%9C%A8%E9%A9%AC/" rel="prev" title="初探远控c&c">
-                  <i class="fa fa-chevron-left"></i> 初探远控c&c
+                <a href="/2021/11/22/%E5%B0%8F%E8%AE%B0/" rel="prev" title="小记">
+                  <i class="fa fa-chevron-left"></i> 小记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/" rel="next" title="Android笔记(一)">
-                  Android笔记(一) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
