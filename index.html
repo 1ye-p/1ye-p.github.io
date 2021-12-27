@@ -214,7 +214,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-03 12:18:57" itemprop="dateModified" datetime="2021-12-03T12:18:57+08:00">2021-12-03</time>
+        <time title="修改时间：2021-12-23 21:44:16" itemprop="dateModified" datetime="2021-12-23T21:44:16+08:00">2021-12-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -237,12 +237,13 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>Android 小白的入门之旅。</p>
-<p>如有不足（错误），请多指正。</p>
+<p>转载、整理一些基础知识点系列。</p>
 <hr>
-<h2 id="Android-虚拟机"><a href="#Android-虚拟机" class="headerlink" title="Android 虚拟机"></a>Android 虚拟机</h2><p>Android虚拟机包含 <code>Java虚拟机</code> (JVM) 和 <code>Dalvik虚拟机</code> (DVM)。</p>
-<p> <code>Android</code> 应用程序运行在 <code>Dalvik/ART</code> 虚拟机，并且每一个应用程序对应有一个单独的 <code>Dalvik</code> 虚拟机实例。<br> <code>Dalvik</code> 虚拟机实则也算是一个 <code>Java</code> 虚拟机，只不过它执行的是 <code>dex</code>文件，而不是 <code>class</code> 文件。</p>
+<h2 id="Android-虚拟机"><a href="#Android-虚拟机" class="headerlink" title="Android 虚拟机"></a>Android 虚拟机</h2><p>Android虚拟机包含 <code>Dalvik虚拟机</code> (DVM)、 <code>ART</code> （Android Runtime）。</p>
+<p> <code>Android</code> 应用程序运行在 <code>Dalvik/ART</code> 虚拟机，并且每一个应用程序对应有一个单独的 <code>Dalvik</code> 虚拟机实例。<br> <code>Dalvik</code> 虚拟机实则也算是一个 <code>Java</code> 虚拟机（JVM），只不过它执行的是 <code>dex</code>文件，而不是 <code>class</code> 文件。</p>
 <p><code>Dalvik</code> 虚拟机执行的是 <code>dex</code> 字节码，从 <code>Android2.2</code> 版本开始，支持 JIT即时编译 (Just in Time)，在程序运行的过程中进行选择热点代码(经常执行的代码)进行编译或者优化。</p>
-<p>而 <code>ART(Android RunTime)</code> 是在<code>Android 4.4</code>中引入的一个开发者选项，也是 <code>Android 5.0</code> 以及更高版本的默认<code>Android</code>运行时。<code>ART</code> 虚拟机执行的是本地机器码。<code>Android</code> 的运行时从 <code>Dalvik</code>虚拟机替换成 <code>ART</code>虚拟机，并不要求开发者将自己的应用直接编译成目标机器码，<code>APK</code> 仍然是一个包含 <code>dex</code> 字节码的文件。</p>
+<p>而 <code>ART(Android RunTime)</code> 是在<code>Android 4.4</code>中引入的一个开发者选项， Android 从5.0以后就完全使用了新的虚拟机ART，其与Dalvik有很大的区别。其推出的目的主要是为了提高Android的执行效率，减少卡顿现象。那它是怎么做的呢？ART 采用了一种叫AOT (ahead of time) 来代替目前的在 <code>runtime</code> 时的 Interpreter 与 JIT。ART 不是等到App运行的时候才去运行dex文件，而是在App安装的时候就通过 <strong>AOT编译器</strong> 将<code>.dex</code>文件编译为对应的<code>.oat</code><a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:95626955%7D">二进制文件</a>，当用户点击App的启动图标时，ART直接加载<code>.oat</code>文件去执行。其中那个<code>.oat</code>文件就是一个**<a href="https://link.zhihu.com/?target=https://baike.baidu.com/item/ELF/7120560">ELF</a>**文件，其是当前机器的可执行的文件了。</p>
+<p><code>Android</code> 的运行时从 <code>Dalvik</code>虚拟机替换成 <code>ART</code>虚拟机，并不要求开发者将自己的应用直接编译成目标机器码，<code>APK</code> 仍然是一个包含 <code>dex</code> 字节码的文件。</p>
 <p><code>ART</code> 和 <code>Dalvik</code> 都是运行 <code>dex</code>字节码的兼容运行时，因此针对 <code>dalvik</code>开发的应用也能在 <code>ART</code> 环境中运作。</p>
 <p><code>dex</code>文件是很多 <code>.class</code>文件通过 <code>DX编译器</code> 处理压缩后的产物，最终可以在 <code>Android</code>运行时环境执行。</p>
 <h3 id="Java虚拟机-和-Dalvik虚拟机的区别"><a href="#Java虚拟机-和-Dalvik虚拟机的区别" class="headerlink" title="Java虚拟机 和 Dalvik虚拟机的区别"></a>Java虚拟机 和 Dalvik虚拟机的区别</h3><ol>
@@ -274,6 +275,108 @@
 <li>虚拟机执行方式</li>
 </ol>
 <p>即时编译。</p>
+<h2 id="Android系统架构"><a href="#Android系统架构" class="headerlink" title="Android系统架构"></a>Android系统架构</h2><p>Andorid系统架构从上到下分别有应用层、应用框架层、系统运行时库层、硬件抽象层、Linux内核层。</p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Android%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.jpg" class="" title="Android系统架构">
+
+<ul>
+<li><p>应用层：包括系统应用比如闹钟、日历等这些在内的以及非系统级别的应用都属于应用层。负责用户交互，也就是我们需要开发的东西。</p>
+</li>
+<li><p>应用框架层：这一层主要是为咱们开发人员提供用来开发应用程序的API，平常我们开发程序大部分都是调用这部分的API来进行开发。这一层主要提供一些ActivityManager 管理应用生命周期、locationManager 地理位置服务、还有就是NotificationManager 消息通知管理等等</p>
+</li>
+<li><p>系统运行库层：这一层主要分为两部分，分别是c/c++程序库和Android运行库</p>
+<p><strong>c++库：</strong>主要是能被Andorid系统不同组件所使用，并通过应用程序框架为开发者提供服务。它主要功能有openggl 绘图方法库，多媒体库支持常用的音频 视频格式录制回访 ，还有我们常用会用到的一个轻量级的数据库 sqlLite 等还有ssl网络协议等等</p>
+<p><strong>Android运行时库：</strong>它主要又分为核心库和虚拟机ART，核心库主要包含Java核心库的大部分功能。Android 5.0系统之前使用的虚拟机是 dalvik，它相对于JVM来说，dalvik虚拟机是专门为移动设备定制的，主要在有限的内存中同时运行多个虚拟机实例，每一个dalvik虚拟机就是一个独立的linux进程，这样独立的进程可以防止在虚拟机崩溃的时候所有程序都被关闭。  5.0之后，dalvik虚拟机被ART所取代，它们主要区别就是dalvik虚拟机，应用每次在运行的时候，都需要把字节码文件转换为机器码来运行，这样应用的运行效率就会比较低。  而ART虚拟机，应用在第一次安装的时候，字节码文件就会预先编译成机器码，让应用成为真正的本地应用。</p>
+</li>
+<li><p>硬件抽象层：它是位于操作系统内核和硬件电路之间的接口层，主要目的在于将硬件抽象化，隐藏了特定平台的硬件接口细节，为操作系统提供虚拟硬件平台，使其具有硬件无关性，可在多平台上进行移植。</p>
+</li>
+<li><p>linux内核层：Android的核心系统服务基于Linux内核，在此基础上添加了部分Android专用的驱动，android系统的安全管理、内存管理、进程管理、网络协议等都依赖于该内核。</p>
+</li>
+</ul>
+<h2 id="Android-编译流程"><a href="#Android-编译流程" class="headerlink" title="Android 编译流程"></a>Android 编译流程</h2><p>一个App从源代码到 <code>.apk</code> 安装文件都经历了哪些过程呢？</p>
+<p>下图非常清楚的描述了这一过程： </p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Android%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B.jpg" class="" title="Android编译流程">
+
+<ol>
+<li><p>通过AAPT(Android Assets Packing Tool) 编译资源文件，将资源文件打包编译并生成生成<strong>R.java</strong>文件，就是放各种资源Id的那个文件。 </p>
+</li>
+<li><p>通过Java编译器<strong>javac</strong>将 <code>.java</code> 源代码文件编译为 <code>.class</code> 字节码文件 </p>
+</li>
+<li><p>通过Dalvik 编译器 将 <code>.class</code> 文件转化为 <code>.dex</code> 文件</p>
+</li>
+<li><p>通过Apk builder 将打包后的资源与 <code>.dex</code> 文件一起生成APK文件。</p>
+</li>
+</ol>
+<h2 id="Android系统的启动流程"><a href="#Android系统的启动流程" class="headerlink" title="Android系统的启动流程"></a>Android系统的启动流程</h2><img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B1.png" class="" title="Android系统启动流程1">
+
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Android%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B2.png" class="" title="系统启动流程2">
+
+<ol>
+<li><p>启动电源以及系统启动<br> 加载引导程序Bootloader到RAM，然后执行。</p>
+</li>
+<li><p>引导程序BootLoader启动<br> 引导程序BootLoader是在Android操作系统开始运行前的一个小程序，它的主要作用是把系统OS拉起来并运行。</p>
+</li>
+<li><p>Linux内核启动<br> 内核启动时，设置缓存、被保护存储器、计划列表、加载驱动。当内核完成系统设置，它首先在系统文件中寻找init.rc文件，并启动init进程。</p>
+</li>
+<li><p>init进程启动<br> init进程是系统空间内的第一个进程，进行初始化和启动属性服务，在main方法中进行，包括初始化资源文件和启动一系列的属性服务。通过执行init.rc文件的脚本文件来启动Zygote进程。</p>
+</li>
+<li><p>Zygote进程启动<br> 所有的应用程序包括system系统进程 都是zygote进程负责创建，因此zygote进程也被称为进程孵化器，它创建进程是通过复制自身来创建应用进程，它在启动过程中会在内部创建一个虚拟机实例，所以通过复制zygote进程而得到的应用进程和系统服务进程都可以快速地在内部的获得一个虚拟机实例拷贝。</p>
+</li>
+<li><p>SystemServer进程启动<br> 启动Binder线程池和SystemServiceManager，systemServiceManger主要是对系统服务进行创建、启动和生命周期管理，就会启动各种系统服务。（android中最核心的服务AMS就是在SystemServer进程中启动的）</p>
+</li>
+<li><p>Launcher启动<br> Launcher组件是由之前启动的systemServer所启动的<br> 这也是andorid系统启动的最后一步，launcher是andorid系统home程序，主要是用来显示系统中已安装的应用程序。    launcher应用程序的启动会通过请求packageManagerService返回系统中已经安装的应用信息，并将这些应用信息通过封装处理成快捷列表显示在系统屏幕上，这样咱们就可以单击启动它们。<br> 被SystemServer进程启动的ActivityManagerService会启动Launcher，Launcher启动后会将已安装应用的快捷图标显示到界面上。</p>
+</li>
+</ol>
+<p>上述七步是手机开机andorid系统启动的流程。</p>
+<h2 id="Android-程序执行流程"><a href="#Android-程序执行流程" class="headerlink" title="Android 程序执行流程"></a>Android 程序执行流程</h2><p>现代虚拟机一般有两种执行方式，根据具体的使用场景各有侧重。</p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/JVM%E6%89%A7%E8%A1%8C%E5%AD%97%E8%8A%82%E7%A0%81%E7%AD%96%E7%95%A5.jpg" class="" title="JVM执行字节码策略">
+
+<p><strong>Interpreter</strong> ：解释执行。一边把字节码翻译成当前硬件平台的机器码一边执行。优点是启动快，缺点就是执行效率太低下了。Interpreter 对应的编译器称为<strong>解释执行编译器</strong>。</p>
+<p><strong>JIT（Just In Time）</strong> ：即时编译。当一些代码被频繁执行到时，虚拟机就将其编译成机器码。这些被频繁执行的代码有个专有名词：“<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E7%83%AD%E7%82%B9%E4%BB%A3%E7%A0%81&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:95626955%7D">热点代码</a>” ，相信大家最熟悉的JVM就是sun公司的的虚拟机<strong>HotSpot</strong>，其也是因为热点探测技术比较牛逼而得名。JIT 对应的编译器为<strong>即时编译器</strong>。</p>
+<h3 id="Dalvik-虚拟机启动App流程"><a href="#Dalvik-虚拟机启动App流程" class="headerlink" title="Dalvik 虚拟机启动App流程"></a>Dalvik 虚拟机启动App流程</h3><img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/Dalvik%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8App%E6%B5%81%E7%A8%8B.jpg" class="" title="Dalvik虚拟机启动App流程">
+
+<p>如上图所示，在Dalvik虚拟机上首次启动App一定是使用Interpreter解释执行的，期间会探测热点代码，使用JIT编译执行，如果我没记错的话，JIT应该是在Android2.2之后加入的，可见最早期的Android很缓慢。</p>
+<h3 id="ART-安装及启动App流程"><a href="#ART-安装及启动App流程" class="headerlink" title="ART 安装及启动App流程"></a>ART 安装及启动App流程</h3><p>前面说过，ART是在App安装的时候将 <code>.apk</code> 文件减压，并将 <code>.dex</code> 文件预编译为 <code>.oat</code> 可执行文件，当App启动的时候就不需要在Runtime解释执行了，但是这种方式也有它自己的缺点。</p>
+<ol>
+<li>增加了App的安装时间，这个很容易理解，因为多了一个预编译过程。</li>
+<li>增加了App所需要的安装空间，与Dalvik相比，手机上多了一份 <code>.oat</code> 文件。特别是无论一个App的某一功能是否被使用到以及被使用的频率，例如一个App的某个功能，用户几乎不会去打开，ART都将其编译为<code>.oat</code>文件就显得有点低效了。</li>
+</ol>
+<p>Google的那些天才工程师既然发现了问题，那肯定就会去想办法优化的。技术的每一次进步，都是站在前面技术的肩膀上的，这一次也不例外，Google的工程师将<strong>Interpreter</strong>,<strong>JIT</strong>与<strong>AOT</strong> 三种技术相结合来优化这个过程。</p>
+<ol>
+<li>当你首次安装并一个App的时候，AOT不将 <code>.dex</code> 文件编译为 <code>.oat</code> 文件，这一步减少了安装时间。系统通过<strong>Interpreter</strong>的方式来启动App.</li>
+<li>当在App运行过程中探测到了热点代码”hot code”，就使用JIT编译</li>
+<li>这些通过JT编译的 <a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E5%B9%B3%E5%8F%B0%E4%BB%A3%E7%A0%81&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:95626955%7D">平台代码</a> 及编译配置文件都会被存储在缓存中，加快下次访问的速度</li>
+</ol>
+<p>当设备处于空闲时间时，AOT 编译器就会启动，结合编译配置文件将热点代码编译为 <code>.oat</code> 可执行文件</p>
+<p>当再次运行App时，ART就可以直接运行 <code>.oat</code> 文件了</p>
+<p><strong>PS:  Android 虚拟机是不能直接执行 <code>.class</code> 文件的，而其只能执行 <code>.dex</code> 文件，所以就必须有一个将Java字节码 <code>.class</code> 文件转化为Dalvik字节码 <code>.dex</code> 文件的的编译器  —— DX编译器（其中一个）</strong></p>
+<h2 id="应用进程启动流程"><a href="#应用进程启动流程" class="headerlink" title="应用进程启动流程"></a>应用进程启动流程</h2><p>首先，activity分为两种分别是根activity和子activity，根activity就是显示在手机屏幕上快捷应用图标，在launcher应用程序启动器，根activity也就是app的第一个activity是由Launcher组件来启动，但它又是通过activity管理服务ActivityManagerService来启动根activity。但是activity Launcher activityManagerService分别运行在不同进程里面，这三个进程是通过binder进程间通信机制来完成进行通信完成activity的启动。应用的启动也就是根activity的启动。</p>
+<p>ActivityManagerService 是一个系统关键服务，运行在systemService系统进程中，负责启动和调度应用程序组件。</p>
+<p>luncher是andorid系统的home程序，管理和安装手机里的所有应用</p>
+<p>时序图如下：</p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/%E5%BA%94%E7%94%A8%E8%BF%9B%E7%A8%8B%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B-%E6%97%B6%E5%BA%8F%E5%9B%BE.png" class="" title="应用进程启动流程-时序图">
+
+<p>应用进程启动流程详情图如下：</p>
+<img src="/2021/12/02/Android%E7%AC%94%E8%AE%B0-%E4%B8%80/%E5%BA%94%E7%94%A8%E8%BF%9B%E7%A8%8B%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E8%AF%A6%E5%9B%BE.png" class="" title="应用进程启动流程详图">
+
+<p>（1）Launcher首先向activityManagerService发送一个启动activity的进程间通信请求</p>
+<p>（2）ams会先把要启动的activity信息保存下来，然后再想Launcher发送一个进入中止状态的进程间通信请求。</p>
+<p>（3）Launcher组件进入终止状态后，就会给ams发送一个已进入终止状态的一个进程间通信请求，ams收到后就会继续执行启动activity操作</p>
+<p>（4）ams如果发现用来运行运行activity的进程不存在，它就会给zygote进程发送一个进程间通信请求，zaygote会调用fork（）方法创建一个新的应用程序进程。zaygote进程在启动的时候在内部创建一个虚拟机实例，它通过复制它本身得到一个应用程序进程。</p>
+<p>（5）新的应用程序进程启动完成之后，就会向ams发送一个启动完成的通信请求，</p>
+<p>（6）进程创建好之后，经过一系列调用就会调用startactivity方法，最后     activity调用oncreate方法构建出页面至此我们的应用正式启动完成。</p>
+<p>TODO：</p>
+<ul>
+<li><input disabled="" type="checkbox"> IPC原理</li>
+<li><input disabled="" type="checkbox"> AMS服务</li>
+<li><input disabled="" type="checkbox"> Binder进程</li>
+<li><input disabled="" type="checkbox"> Launcher组件（Android的各个组件）</li>
+<li><input disabled="" type="checkbox"> zaygote进程 </li>
+<li><input disabled="" type="checkbox"> JNI</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/95626955">深入理解Android虚拟机及编译系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5ed975c9801f">AMS服务简介、Android系统启动流程、应用进程启动流程</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6850418121287663630">学习笔记-Android虚拟机与类加载机制</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4e36e7daa84d">Android系统启动流程和App启动流程</a></p>
 
       
     </div>
